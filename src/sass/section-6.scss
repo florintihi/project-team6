@@ -27,6 +27,7 @@
     line-height: 24px;
     letter-spacing: -0.03em;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .section-6 span:nth-child(2){
@@ -62,6 +63,7 @@
 
 
 // Modal
+
 .is-hidden{
   visibility: hidden;
   opacity: 0;
@@ -81,21 +83,20 @@
 }
 
 .modal-content{
+  margin: 0;
+  padding: 0;
   opacity: 100%;
   position: fixed;
   z-index: 4;
   background-color: white;
   width: 70%;
-  height: 35%;
+  height: 40%;
   border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 24px;
 }
 
-.modal button{
+.close-btn{
+  padding: 0;
+  display: flex;
   z-index: 1;
   background-color: transparent;
   color: white;
@@ -103,7 +104,7 @@
   border: none;
   right: 10px;
   top: 10px;
-  font-size: 24px;
+  font-size: 32px;
 }
 
 .modal-img{
@@ -142,7 +143,7 @@
 
 .modal-content form{
   position: relative;
-  padding-bottom: 32px;
+  padding-bottom: 82px;
 }
 
 .modal-content form input[type=email]{
@@ -184,6 +185,16 @@
   transition: var(--transition);
 }
 
+.modal-form{
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .section-6 {
     background-image: url(/src/images/mobile/Subscribe-m-2x.jpg);
@@ -198,16 +209,34 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .modal-text ,
+  .modal-content form{
+    padding-left: 40px;
+  } 
   .modal-content{
     width: 538px;
     height: 412px;
-  }
-  .modal-img{
-    height: 100%;
+    align-items: flex-start;
   }
   .modal-img img{
     height: 90%;
   }
+  .modal-content form{
+    padding-bottom: 40px;
+  }
+  .modal-content form div{
+    width: 458px;
+  }
+  .modal-content form input[type=email]{
+    width: 313px;
+  }
+  .modal-content form input[type=submit]{
+    width: 137px;
+  }
+  .modal-form{
+    align-items: flex-start;
+  }
+
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .section-6 {
